@@ -9,19 +9,19 @@
                 <input type="hidden" formControlName="$key">
 
         <div class="form-Group">
-                <label>FullName</label>
+                <label>Full_Name</label>
                   <input  type="text" formControlName="FullName" class="form-control"
                   [ngClass]="{'is-invalid':submitted && formControl.FullName.errors}">
                   <div class="invalid-feedback">
                     <label *ngIf="submitted && formControl.FullName.errors">
-                        This filed is requied
+                        This filed is requied..
                     </label>
                 </div>
                </div>
                
 
                <div class="form-Group">
-                    <label>Email</label>
+                    <label>Email_Id</label>
                       <input type="text" formControlName="Email" class="form-control"
                       [ngClass]="{'is-invalid':submitted && formControl.FullName.errors}">
                       <div class="invalid-feedback">
@@ -32,7 +32,7 @@
                    </div>
                    
                    <div class="form-Group">
-                        <label>Mobile</label>
+                        <label>Mobile_No</label>
                           <input type="text" formControlName="Mobile" class="form-control"
                           [ngClass]="{'is-invalid':submitted && formControl.Mobile.errors}">
                           <div class="invalid-feedback">
