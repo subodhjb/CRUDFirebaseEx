@@ -1,0 +1,73 @@
+
+<p>customer works!</p>
+
+<div class="row">
+    <div class="col-md-5">
+           
+        <form [formGroup]="this.customerService.form" (ngSubmit)="onSubmit()">
+       
+                <input type="hidden" formControlName="$key">
+
+        <div class="form-Group">
+                <label>FullName</label>
+                  <input  type="text" formControlName="FullName" class="form-control"
+                  [ngClass]="{'is-invalid':submitted && formControl.FullName.errors}">
+                  <div class="invalid-feedback">
+                    <label *ngIf="submitted && formControl.FullName.errors">
+                        This filed is requied
+                    </label>
+                </div>
+               </div>
+               
+
+               <div class="form-Group">
+                    <label>Email</label>
+                      <input type="text" formControlName="Email" class="form-control"
+                      [ngClass]="{'is-invalid':submitted && formControl.FullName.errors}">
+                      <div class="invalid-feedback">
+                        <label *ngIf="submitted && formControl.Email.errors">
+                            This filed is requied
+                        </label>
+                    </div>
+                   </div>
+                   
+                   <div class="form-Group">
+                        <label>Mobile</label>
+                          <input type="text" formControlName="Mobile" class="form-control"
+                          [ngClass]="{'is-invalid':submitted && formControl.Mobile.errors}">
+                          <div class="invalid-feedback">
+                            <label *ngIf="submitted && formControl.Mobile.errors">
+                                This filed is requied
+                            </label>
+                        </div>
+                       </div>
+
+                       <div class="form-Group">
+                            <label>Location</label>
+                              <input type="text" formControlName="Location" class="form-control"
+                              [ngClass]="{'is-invalid':submitted && formControl.Location.errors}">
+                              <div class="invalid-feedback">
+                                <label *ngIf="submitted && formControl.Location.errors">
+                                    This filed is requied
+                                </label>
+                            </div>
+                           </div>
+                   
+                            <br>  
+
+         <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="submit">
+             <br>
+             <div class="alert alert-info" *ngIf="showSuccessMassage" >
+                Submitted Successfully..!!
+             </div>
+         </div>
+
+    </form>
+    </div>
+
+    <div class="col-md-7">
+        <app-customer-list></app-customer-list>
+    </div>
+
+</div>
